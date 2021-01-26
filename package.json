@@ -1,0 +1,16 @@
+{
+  "name": "syscon",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "updated-packages": "lerna changed",
+    "ls": "lerna ls",
+    "build": "lerna run prebuild && lerna run build",
+    "test:dev": "lerna run test",
+    "test": "lerna run test:prod",
+    "publish": "npm run test && npm run build && lerna publish"
+  }
+}
